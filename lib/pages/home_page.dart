@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Luis GD (Osito del pueblo)'),
+        title: Text('Practica'),
       ),
       body: FutureBuilder(
         future: traerInformacion(),
