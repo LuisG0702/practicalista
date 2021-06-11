@@ -4,9 +4,7 @@ import 'package:practicadeformulario/models/comment_models.dart';
 
 // ignore: must_be_immutable
 class NewCommentPage extends StatelessWidget {
-  final comentario = new Comment();
-
-  get http => null;
+  final comentario = new Comment(postId: '1', body: 'jeje');
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +42,7 @@ class NewCommentPage extends StatelessWidget {
                   )),
               ElevatedButton(
                   onPressed: () async {
+                    print(comentario.toJson());
                     await registrarComentario(comentario.toJson());
                   },
                   child: Text('GUARDAR'))
